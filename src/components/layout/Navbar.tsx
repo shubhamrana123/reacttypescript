@@ -3,6 +3,7 @@ import 'boxicons'
 import mdVerseLogo from '../../assets/images/md-verse-logo.png'
 import image from '../../assets/images/download.png'
 import TemporaryDrawer from '../Drawer'
+import DrawerLayout from '../Drawer'
 function Navbar() {
     const [showProfile, setShowProfile] = useState(false)
     const showUserProfile = () =>{
@@ -61,7 +62,10 @@ setShowProfile(true)
           
           <li className="nav-item dropdown">
             <a className="nav-link border-remove-btn"  role="button"   >
-            <TemporaryDrawer></TemporaryDrawer>
+            {/* <TemporaryDrawer></TemporaryDrawer> */}
+            <DrawerLayout anchor={undefined} width={0} open={false} onClose={function (): void {
+                    throw new Error('Function not implemented.')
+                  } } component={undefined}></DrawerLayout>
             </a>
           </li>
           {/* <li class="nav-item">

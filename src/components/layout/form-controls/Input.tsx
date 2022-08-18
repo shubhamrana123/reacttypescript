@@ -6,9 +6,9 @@ function Input(props: IInputProps) {
     return (
         <Fragment>
             <label >{props.label}</label>
-            <input className='form-control' type={props.type} {...props.register(props.controller, { required: fields.required, minLength: fields.minLength, maxLength: fields.maxLength })} />
+            <input className='form-control' type={props.type} {...props.register(props.controller, { required: fields.required, minLength: fields.minLength, maxLength: fields.maxLength,pattern:fields.pattern })} />
             <br />
-            {props.errors[props.controller] && <p className="text-danger">This field is required </p>}
+            {/* {props.errors[props.controller] && <p className="text-danger">This field is required </p>} */}
         </Fragment>
     )
 }

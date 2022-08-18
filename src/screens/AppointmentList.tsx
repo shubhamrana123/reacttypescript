@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import InitiateAppointment from '../components/appointment/InitiateAppointment'
+import DrawerLayout from '../components/Drawer'
 import TemporaryDrawer from '../components/Drawer'
 import Button from '../components/layout/form-controls/Button'
 
@@ -21,7 +22,13 @@ setInvite(true)
 
 <h2>Appointments</h2>
 <Button onClick={InitiatesAppointment} text="Initiate Appointment" ></Button>
-<TemporaryDrawer></TemporaryDrawer>
+<DrawerLayout anchor='right' width={0} open={false} onClose={function (): void {
+        throw new Error('Function not implemented.')
+      } } component={<AppointmentList></AppointmentList>}></DrawerLayout>
+{/* <TemporaryDrawer anchor="right" width={30} open={false} onClose={function (): void {
+        throw new Error('Function not implemented.')
+      } } component={undefined}></TemporaryDrawer> */}
+      
 {/* <div className="row">
     <div className="col-md-4"></div>
     <div className="col-md-4">

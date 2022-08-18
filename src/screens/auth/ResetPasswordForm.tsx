@@ -23,8 +23,8 @@ navigate('/login')
                     <b> Reset Your Password</b> <br />
                     <ViewCard>
                         <form onSubmit={handleSubmit(onHandleClick)}>
-                            <Input controller='password' type='password' label="New Password" register={register} errors={errors} fields={{ required: true, maxLength: 10, minLength: 1 }}></Input>
-                            <Input controller='password' label="Confirm Password" type='password' register={register} errors={errors} fields={{ required: true, maxLength: 10, minLength: 1 }}></Input>
+                            <Input controller='password' type='password' label="New Password" register={register} errors={errors} fields={{ required: true, maxLength: 10, minLength: 1 ,pattern:"(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"}}></Input>
+                            <Input controller='password' label="Confirm Password" type='password' register={register} errors={errors} fields={{ required: true, maxLength: 10, minLength: 1,pattern:"(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"}}></Input>
                             <br />
                             <button className="form-control btn btn-primary"> Save Password</button>
 

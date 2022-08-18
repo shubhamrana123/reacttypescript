@@ -10,8 +10,8 @@ function Sidebar() {
     } = useForm<any>();
   return (
     <>rtt
-    <InitiateAppointment></InitiateAppointment>
-    <Input controller='patientName' label='Patient' type='text' register={register} errors={errors} fields={{ required: true, maxLength: 10, minLength: 1 }}  />
+    {/* <InitiateAppointment></InitiateAppointment> */}
+    <Input controller='patientName' label='Patient' type='text' register={register} errors={errors} fields={{ required: true, maxLength: 10, minLength: 1 ,pattern:"(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"}}  />
     </>
   )
 }
